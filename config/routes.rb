@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root to: "main#index"
 
+  get "password", to: "passwords#edit"
+  patch "password", to: "password#update"
+
   get "sign_up", to: "registration#new"
   post "sign_up", to: "registration#create"
 
